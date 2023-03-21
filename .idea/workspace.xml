@@ -5,8 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e8c0009-7735-479b-a051-64d08a0bf3b3" name="变更" comment="Peggie练习1.0">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Config/WebMvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/setting.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/commons/R.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/dao/DaoEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/entity/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/filter/LoginCheckFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/ServiceEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/impl/ServiceEmployeeImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Config/WebMvcConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/PeggieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/PeggieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +29,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -49,19 +63,21 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "D:/zhucunchu/桌面/java/2023javaspringboot/RUIJIWAIMAI/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "settings.sync",
+    "settings.editor.selected.configurable": "cn.yiiguxing.plugin.translate",
     "spring.configuration.checksum": "34ed7d2d9f573aa5691cb08144cc65e5",
     "vue.rearranger.settings.migration": "true"
   }
@@ -71,6 +87,14 @@
       <recent name="D:\zhucunchu\桌面\java\2023javaspringboot\RUIJIWAIMAI\src\main\resources" />
       <recent name="D:\zhucunchu\桌面\java\2023javaspringboot\RUIJIWAIMAI" />
     </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="JetRunConfigurationType" />
+        <option value="docker-deploy" />
+      </set>
+    </option>
   </component>
   <component name="RunManager" selected="Spring Boot.PeggieApplication">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -118,7 +142,14 @@
       <workItem from="1678846443202" duration="1231000" />
       <workItem from="1678847965099" duration="122000" />
       <workItem from="1678848101364" duration="1824000" />
-      <workItem from="1678851721323" duration="1054000" />
+      <workItem from="1678851721323" duration="1084000" />
+      <workItem from="1679019202113" duration="4012000" />
+      <workItem from="1679135444269" duration="2159000" />
+      <workItem from="1679191364576" duration="15000" />
+      <workItem from="1679272961988" duration="8009000" />
+      <workItem from="1679307460936" duration="32000" />
+      <workItem from="1679307502254" duration="1091000" />
+      <workItem from="1679391281643" duration="3546000" />
     </task>
     <task id="LOCAL-00001" summary="Peggie练习1.0">
       <created>1678848557404</created>
@@ -141,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678848910676</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Peggie练习1.0">
+      <created>1678852784102</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678852784102</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +187,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Peggie练习1.0" />
     <option name="LAST_COMMIT_MESSAGE" value="Peggie练习1.0" />
   </component>

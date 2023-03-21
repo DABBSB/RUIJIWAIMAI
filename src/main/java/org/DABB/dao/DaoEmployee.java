@@ -1,0 +1,9 @@
+package org.DABB.dao;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.DABB.entity.Employee;
+import org.apache.ibatis.annotations.Mapper;
+
+@Mapper
+public interface DaoEmployee extends BaseMapper<Employee> {
+}

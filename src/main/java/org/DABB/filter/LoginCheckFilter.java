@@ -25,7 +25,7 @@ public class LoginCheckFilter implements Filter {
         //        获取本次请求的URI
         String requestURI = request.getRequestURI();
         //判断本次请求是否需要处理
-
+        log.info("拦截到请求:{}", requestURI);
         String[] urls = new String[]{
                 "/employee/login",
                 "/employee/logout",
@@ -36,17 +36,20 @@ public class LoginCheckFilter implements Filter {
         boolean check = check(urls, requestURI);
 //        如不需要处理直接放行
         if (check) {
+            log.info("本次请求{}不需要处理", requestURI);
             filterChain.doFilter(request, response);
             return;
         }
 //        判断登录状态
         if (request.getSession().getAttribute("employee") != null) {
+            log.info("用户已登陆，用户ID为{}", request.getSession().getAttribute("employee"));
             filterChain.doFilter(request, response);
             return;
         }
+        log.info("用户未登录");
 //       如果未登录则返回未登录结果，通过输出流来相应数据
         response.getWriter().write(JSON.toJSONString(R.error("NOTLOGIN")));
-        log.info("拦截到请求:{}", requestURI);
+
     }
 
     /**

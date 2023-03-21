@@ -137,7 +137,7 @@
       <workItem from="1679307460936" duration="32000" />
       <workItem from="1679307502254" duration="1091000" />
       <workItem from="1679391281643" duration="4305000" />
-      <workItem from="1679399330490" duration="3017000" />
+      <workItem from="1679399330490" duration="4369000" />
     </task>
     <task id="LOCAL-00001" summary="Peggie练习1.0">
       <created>1678848557404</created>
@@ -174,7 +174,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679395677009</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Peggie练习1.1">
+      <created>1679402367717</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1679402367717</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Peggie练习1.1">
+      <created>1679402442604</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1679402442604</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +198,8 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Peggie练习1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Peggie练习1.0" />
+    <MESSAGE value="Peggie练习1.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Peggie练习1.1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

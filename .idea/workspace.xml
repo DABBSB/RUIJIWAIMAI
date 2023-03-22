@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e8c0009-7735-479b-a051-64d08a0bf3b3" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Config/mybatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/commons/GlobalExceptionHandler.java" afterDir="false" />
+    <list default="true" id="5e8c0009-7735-479b-a051-64d08a0bf3b3" name="变更" comment="Peggie练习1.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Config/WebMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/entity/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +141,7 @@
       <workItem from="1679391281643" duration="4305000" />
       <workItem from="1679399330490" duration="4380000" />
       <workItem from="1679445478269" duration="10400000" />
-      <workItem from="1679463315382" duration="4665000" />
+      <workItem from="1679463315382" duration="13717000" />
     </task>
     <task id="LOCAL-00001" summary="Peggie练习1.0">
       <created>1678848557404</created>
@@ -200,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679403706384</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Peggie练习1.2">
+      <created>1679477451121</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1679477451121</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +217,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Peggie练习1.0" />
     <MESSAGE value="Peggie练习1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Peggie练习1.1" />
+    <MESSAGE value="Peggie练习1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Peggie练习1.2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

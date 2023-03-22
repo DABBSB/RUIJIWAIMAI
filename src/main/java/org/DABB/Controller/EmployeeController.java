@@ -55,6 +55,7 @@ public class EmployeeController {
         return R.success(emp);
     }
 
+    //注销
     @PostMapping("/logout")
     public R<String> logout(HttpServletRequest request) {
         request.getSession().removeAttribute("employee");
@@ -103,6 +104,31 @@ public class EmployeeController {
         serviceEmployee.page(page1, lqw);
 
         return R.success(page1);
+    }
+
+    @PutMapping
+    public R<String> update(HttpServletRequest request, @RequestBody Employee employee) {
+        log.info(employee.toString());
+        Long employee1 = (Long) request.getSession().getAttribute("employee");
+//        更改时间
+        employee.setUpdate_time(LocalDateTime.now());
+//        更改更新用户
+        employee.setUpdate_user(employee1);
+//        修改数据
+        serviceEmployee.updateById(employee);
+
+        return R.success("员工信息修改成功");
+//        复用
+    }
+
+    //    回显
+    @GetMapping("/{id}")
+    public R<Employee> getById(@PathVariable Long id) {
+        Employee byId = serviceEmployee.getById(id);
+        if (byId != null) {
+            return R.success(byId);
+        }
+        return R.error("没有该员工的信息");
     }
 }
 

@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e8c0009-7735-479b-a051-64d08a0bf3b3" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Config/mybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/commons/GlobalExceptionHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/entity/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/entity/Employee.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +140,9 @@
       <workItem from="1679307460936" duration="32000" />
       <workItem from="1679307502254" duration="1091000" />
       <workItem from="1679391281643" duration="4305000" />
-      <workItem from="1679399330490" duration="4369000" />
+      <workItem from="1679399330490" duration="4380000" />
+      <workItem from="1679445478269" duration="10400000" />
+      <workItem from="1679463315382" duration="4665000" />
     </task>
     <task id="LOCAL-00001" summary="Peggie练习1.0">
       <created>1678848557404</created>
@@ -188,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679402442604</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Peggie练习1.1">
+      <created>1679403706384</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679403706384</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

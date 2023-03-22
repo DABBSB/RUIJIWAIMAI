@@ -16,12 +16,10 @@ public class Employee {
     private String sex;
     private String idNumber;
     private Integer status;
-    @TableField(fill = FieldFill.INSERT)
     private LocalDateTime create_time;
-    @TableField(fill = FieldFill.INSERT_UPDATE)
     private LocalDateTime update_time;
     @TableField(fill = FieldFill.INSERT)
-    private LocalDateTime create_user;
+    private Long create_user;
     @TableField(fill = FieldFill.INSERT_UPDATE)
-    private LocalDateTime update_user;
+    private Long update_user;
 }

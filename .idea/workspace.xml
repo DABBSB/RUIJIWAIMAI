@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e8c0009-7735-479b-a051-64d08a0bf3b3" name="变更" comment="Peggie练习1.2">
+    <list default="true" id="5e8c0009-7735-479b-a051-64d08a0bf3b3" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Config/WebMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/backend/page/member/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +139,8 @@
       <workItem from="1679391281643" duration="4305000" />
       <workItem from="1679399330490" duration="4380000" />
       <workItem from="1679445478269" duration="10400000" />
-      <workItem from="1679463315382" duration="13717000" />
+      <workItem from="1679463315382" duration="14316000" />
+      <workItem from="1679530894281" duration="1316000" />
     </task>
     <task id="LOCAL-00001" summary="Peggie练习1.0">
       <created>1678848557404</created>
@@ -206,7 +205,21 @@
       <option name="project" value="LOCAL" />
       <updated>1679477451121</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Peggie练习1.3(添加禁启用与修改和)">
+      <created>1679491152687</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1679491152687</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Peggie练习1.3(添加禁启用与修改和扩展消息转换器+对象映射器)">
+      <created>1679491186101</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1679491186101</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,7 +231,9 @@
     <MESSAGE value="Peggie练习1.0" />
     <MESSAGE value="Peggie练习1.1" />
     <MESSAGE value="Peggie练习1.2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Peggie练习1.2" />
+    <MESSAGE value="Peggie练习1.3(添加禁启用与修改和)" />
+    <MESSAGE value="Peggie练习1.3(添加禁启用与修改和扩展消息转换器+对象映射器)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Peggie练习1.3(添加禁启用与修改和扩展消息转换器+对象映射器)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

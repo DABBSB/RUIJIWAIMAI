@@ -106,14 +106,21 @@ public class EmployeeController {
         return R.success(page1);
     }
 
+    /**
+     * 修改用户
+     *
+     * @param request
+     * @param employee
+     * @return
+     */
     @PutMapping
     public R<String> update(HttpServletRequest request, @RequestBody Employee employee) {
         log.info(employee.toString());
-        Long employee1 = (Long) request.getSession().getAttribute("employee");
+        Object employee1 = request.getSession().getAttribute("employee");
 //        更改时间
         employee.setUpdate_time(LocalDateTime.now());
 //        更改更新用户
-        employee.setUpdate_user(employee1);
+        employee.setUpdate_user((Long) employee1);
 //        修改数据
         serviceEmployee.updateById(employee);
 

@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="5e8c0009-7735-479b-a051-64d08a0bf3b3" name="变更" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Config/WebMvcConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/commons/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/commons/GlobalExceptionHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,6 +114,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.PeggieApplication" />
+        <item itemvalue="应用程序.Main" />
+        <item itemvalue="应用程序.Main" />
         <item itemvalue="Spring Boot.PeggieApplication" />
         <item itemvalue="应用程序.Main" />
       </list>
@@ -232,6 +237,7 @@
     <MESSAGE value="Peggie练习1.1" />
     <MESSAGE value="Peggie练习1.2" />
     <MESSAGE value="Peggie练习1.3(添加禁启用与修改和)" />
+    <MESSAGE value="Peggie练习1.3(添加禁启用与修改和扩展消息转换器+对象映射器)空" />
     <MESSAGE value="Peggie练习1.3(添加禁启用与修改和扩展消息转换器+对象映射器)" />
     <option name="LAST_COMMIT_MESSAGE" value="Peggie练习1.3(添加禁启用与修改和扩展消息转换器+对象映射器)" />
   </component>

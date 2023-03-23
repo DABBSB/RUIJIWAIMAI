@@ -8,7 +8,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import java.sql.SQLIntegrityConstraintViolationException;
 
-//错误提取
+//全局异常 处理
+
 @RestControllerAdvice(annotations = {RestController.class, Controller.class})
 @Slf4j
 public class GlobalExceptionHandler {

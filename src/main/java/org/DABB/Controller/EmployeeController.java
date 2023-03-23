@@ -82,6 +82,7 @@ public class EmployeeController {
         employee.setUpdate_user(UserId);
         //添加数据
         serviceEmployee.save(employee);
+//        log.info(String.valueOf(request),employee);
         return R.success("添加成功");
     }
 

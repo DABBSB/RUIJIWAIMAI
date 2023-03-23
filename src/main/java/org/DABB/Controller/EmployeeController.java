@@ -18,15 +18,18 @@ import java.time.LocalDateTime;
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
-    @Autowired
-    private ServiceEmployee serviceEmployee;
+    private final ServiceEmployee serviceEmployee;
+
+    public EmployeeController(ServiceEmployee serviceEmployee) {
+        this.serviceEmployee = serviceEmployee;
+    }
 
     /**
      * 员工登录
      *
-     * @param employee
-     * @param request
-     * @return
+     * @param employee 员工
+     * @param request  *
+     * @return *
      */
     @PostMapping("/login")
     public R<Employee> login(@RequestBody Employee employee, HttpServletRequest request) {
@@ -65,8 +68,8 @@ public class EmployeeController {
     /**
      * 添加员工
      *
-     * @param employee
-     * @return
+     * @param employee *
+     * @return *
      */
     @PostMapping
     public R<String> Add(HttpServletRequest request, @RequestBody Employee employee) {
@@ -89,7 +92,7 @@ public class EmployeeController {
     /**
      * 分页
      *
-     * @return
+     * @return R
      */
     @GetMapping("/page")
     public R<Page> pageR(int page, int pageSize, String name) {
@@ -110,9 +113,9 @@ public class EmployeeController {
     /**
      * 修改用户
      *
-     * @param request
-     * @param employee
-     * @return
+     * @param request *
+     * @param employee *
+     * @return R
      */
     @PutMapping
     public R<String> update(HttpServletRequest request, @RequestBody Employee employee) {

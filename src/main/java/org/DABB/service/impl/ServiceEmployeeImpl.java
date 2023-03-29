@@ -1,7 +1,7 @@
 package org.DABB.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.DABB.dao.DaoEmployee;
+import org.DABB.Mapper.DaoEmployee;
 import org.DABB.entity.Employee;
 import org.DABB.service.ServiceEmployee;
 import org.springframework.stereotype.Service;

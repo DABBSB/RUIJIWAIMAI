@@ -17,9 +17,9 @@ import javax.servlet.http.HttpServletRequest;
 import java.sql.Time;
 import java.time.LocalDateTime;
 
-@Slf4j
-@RestController
-@RequestMapping("/employee")
+//@Slf4j
+//@RestController
+//@RequestMapping("/employee")
 public class EmployeeController2 {
     @Autowired
     ServiceEmployee serviceEmployee;

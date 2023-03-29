@@ -48,7 +48,7 @@ public class CategoryController {
 
     @DeleteMapping
     public R<String> delete(Long ids) {
-        serviceCategory.removeById(ids);
+        serviceCategory.remove(ids);
         return R.success("删除成功");
     }
 }

@@ -1,4 +1,4 @@
-package org.DABB.dao;
+package org.DABB.Mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.DABB.entity.Employee;

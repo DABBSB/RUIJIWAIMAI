@@ -148,7 +148,8 @@
       <workItem from="1680223385302" duration="70000" />
       <workItem from="1680223465238" duration="3333000" />
       <workItem from="1680228754236" duration="2482000" />
-      <workItem from="1680231807038" duration="2185000" />
+      <workItem from="1680231807038" duration="2353000" />
+      <workItem from="1680321632571" duration="2177000" />
     </task>
     <task id="LOCAL-00001" summary="Peggie练习1.0">
       <created>1678848557404</created>
@@ -248,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680232079998</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Peggie练习1.4">
+      <created>1680234964083</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1680234964083</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

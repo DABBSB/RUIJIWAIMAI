@@ -11,10 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletResponse;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
 import java.util.UUID;
 
 @Slf4j
@@ -39,7 +36,7 @@ public class CommonController {
             //生成文件夹
             file1.mkdirs();
         }
-//        输入流
+//        将临时文件转存到指定文件夹下
         try {
             file.transferTo(new File(reggiePath + UUIDs));
         } catch (IOException e) {
@@ -49,26 +46,31 @@ public class CommonController {
         return R.success(filename);
     }
 
-    //    图片回显
+    //    文件下载
     @GetMapping("/download")
     public void download(String name, HttpServletResponse response) {
+
         try {
-            FileInputStream stream = new FileInputStream(new File(reggiePath + name));
+            //输入流读取文件
+            FileInputStream fileInputStream = new FileInputStream(reggiePath + name);
+            //输出流，将文件写回浏览器
             ServletOutputStream outputStream = response.getOutputStream();
-            response.setContentType("666/jpeg");
+
+            response.setContentType("image/jpeg");
 
             int len = 0;
             byte[] bytes = new byte[1024];
-            while ((len = stream.read(bytes)) != -1) {
-                outputStream.write(bytes, 0, len);
+            while ((len = fileInputStream.read(bytes, 0, len)) != -1) {
+                outputStream.write(bytes);
                 outputStream.flush();
             }
+
+            fileInputStream.close();
+            outputStream.close();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-
-
 }
 
 

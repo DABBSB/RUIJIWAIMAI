@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e8c0009-7735-479b-a051-64d08a0bf3b3" name="变更" comment="Peggie练习1.4">
+    <list default="true" id="5e8c0009-7735-479b-a051-64d08a0bf3b3" name="变更" comment="Peggie练习1.4.1">
+      <change afterPath="$PROJECT_DIR$/.idea/free-mybatis-generator-config.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/DishflavorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/DishFlavorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/impl/DishFlavorServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/CategoryController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/CommonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/CommonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/commons/BaseContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/commons/BaseContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/commons/MymetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/commons/MymetaObjectHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/filter/LoginCheckFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/filter/LoginCheckFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/filter/LoginCheckFilter2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/filter/LoginCheckFilter2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +159,9 @@
       <workItem from="1680223465238" duration="3333000" />
       <workItem from="1680228754236" duration="2482000" />
       <workItem from="1680231807038" duration="2353000" />
-      <workItem from="1680321632571" duration="2177000" />
+      <workItem from="1680321632571" duration="2961000" />
+      <workItem from="1680324721374" duration="1739000" />
+      <workItem from="1680327647885" duration="3977000" />
     </task>
     <task id="LOCAL-00001" summary="Peggie练习1.0">
       <created>1678848557404</created>
@@ -256,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680234964083</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Peggie练习1.4.1">
+      <created>1680324128733</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1680324128733</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +291,8 @@
     <MESSAGE value="Peggie练习1.3(添加禁启用与修改和扩展消息转换器+对象映射器)空" />
     <MESSAGE value="Peggie练习1.3(添加禁启用与修改和扩展消息转换器+对象映射器)" />
     <MESSAGE value="Peggie练习1.4" />
-    <option name="LAST_COMMIT_MESSAGE" value="Peggie练习1.4" />
+    <MESSAGE value="Peggie练习1.4.1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Peggie练习1.4.1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

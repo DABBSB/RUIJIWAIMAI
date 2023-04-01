@@ -1,13 +1,21 @@
 package org.DABB.commons;
 
 public class BaseContext {
-    private static final ThreadLocal<Long> LONG_THREAD_LOCAL = new ThreadLocal<>();
+    private static  ThreadLocal<Long> threadLocal = new ThreadLocal<>();
 
-    public static void setid(Long id) {
-        LONG_THREAD_LOCAL.set(id);
+    /**
+     * 设置值
+     * @param id
+     */
+    public static void setCurrentId(Long id){
+        threadLocal.set(id);
     }
 
-    public static Long getid() {
-        return LONG_THREAD_LOCAL.get();
+    /**
+     * 获取值
+     * @return
+     */
+    public static Long getCurrentId(){
+        return threadLocal.get();
     }
 }

@@ -9,16 +9,17 @@ import org.DABB.service.ServiceCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Slf4j
 @RestController
 @RequestMapping("/category")
 public class CategoryController {
-    final
+    @Autowired
     ServiceCategory serviceCategory;
 
-    public CategoryController(ServiceCategory serviceCategory) {
-        this.serviceCategory = serviceCategory;
-    }
+
+
     /**
      * 添加
      *
@@ -51,4 +52,24 @@ public class CategoryController {
         serviceCategory.remove(ids);
         return R.success("删除成功");
     }
+
+    /**
+     * 根据条件来查询分类数据
+     *
+     * @param category
+     * @return
+     */
+    @GetMapping("/list")
+    public R<List<Category>> listR(Category category) {
+//    添加排序
+        LambdaQueryWrapper<Category> lqw = new LambdaQueryWrapper<>();
+//        条件
+        lqw.eq(category.getType() != null, Category::getType, category.getType());
+//        条件排序
+        lqw.orderByAsc(Category::getSort).orderByDesc(Category::getUpdateTime);
+
+        List<Category> list = serviceCategory.list(lqw);
+        return R.success(list);
+    }
+
 }

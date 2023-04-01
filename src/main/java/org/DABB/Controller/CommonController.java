@@ -60,11 +60,10 @@ public class CommonController {
 
             int len = 0;
             byte[] bytes = new byte[1024];
-            while ((len = fileInputStream.read(bytes, 0, len)) != -1) {
-                outputStream.write(bytes);
+            while ((len = fileInputStream.read(bytes)) != -1) {
+                outputStream.write(bytes,0,len);
                 outputStream.flush();
             }
-
             fileInputStream.close();
             outputStream.close();
         } catch (IOException e) {

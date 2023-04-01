@@ -6,8 +6,8 @@
         <option name="generateConfig">
           <GenerateConfig>
             <option name="annotationType" value="MYBATIS_PLUS3" />
-            <option name="basePackage" value="generator" />
-            <option name="basePath" value="src/main/java" />
+            <option name="basePackage" value="org.DABB" />
+            <option name="basePath" value="src/main/java/org/DABB" />
             <option name="classNameStrategy" value="camel" />
             <option name="encoding" value="UTF-8" />
             <option name="extraClassSuffix" value="" />
@@ -28,16 +28,6 @@
                   <option name="fileNameWithSuffix" value="${domain.fileName}Mapper.java" />
                   <option name="modulePath" value="$PROJECT_DIR$" />
                   <option name="packageName" value="${domain.basePackage}.mapper" />
-                </ModuleInfoGo>
-                <ModuleInfoGo>
-                  <option name="basePath" value="src/main/resources" />
-                  <option name="configFileName" value="mapperXml.ftl" />
-                  <option name="configName" value="mapperXml" />
-                  <option name="encoding" value="${domain.encoding}" />
-                  <option name="fileName" value="${domain.fileName}Mapper" />
-                  <option name="fileNameWithSuffix" value="${domain.fileName}Mapper.xml" />
-                  <option name="modulePath" value="$PROJECT_DIR$" />
-                  <option name="packageName" value="mapper" />
                 </ModuleInfoGo>
                 <ModuleInfoGo>
                   <option name="basePath" value="${domain.basePath}" />
@@ -69,40 +59,8 @@
             <option name="tableUIInfoList">
               <list>
                 <TableUIInfo>
-                  <option name="className" value="Dish" />
-                  <option name="tableName" value="dish" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="OrderDetail" />
-                  <option name="tableName" value="order_detail" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="ShoppingCart" />
-                  <option name="tableName" value="shopping_cart" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="User" />
-                  <option name="tableName" value="user" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="SetmealDish" />
-                  <option name="tableName" value="setmeal_dish" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="Orders" />
-                  <option name="tableName" value="orders" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="AddressBook" />
-                  <option name="tableName" value="address_book" />
-                </TableUIInfo>
-                <TableUIInfo>
                   <option name="className" value="DishFlavor" />
                   <option name="tableName" value="dish_flavor" />
-                </TableUIInfo>
-                <TableUIInfo>
-                  <option name="className" value="Setmeal" />
-                  <option name="tableName" value="setmeal" />
                 </TableUIInfo>
               </list>
             </option>

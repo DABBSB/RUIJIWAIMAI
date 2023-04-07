@@ -4,11 +4,15 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.DABB.Mapper.SetmealMapper;
 import org.DABB.commons.CustomException;
+import org.DABB.dto.DishDto;
 import org.DABB.dto.SetmealDto;
+import org.DABB.entity.Dish;
+import org.DABB.entity.DishFlavor;
 import org.DABB.entity.Setmeal;
 import org.DABB.entity.SetmealDish;
 import org.DABB.service.SetmealDishService;
 import org.DABB.service.SetmealService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -59,7 +63,49 @@ public class SetmealServiceImpl extends ServiceImpl<SetmealMapper, Setmeal> impl
 
         setmealDishService.remove(lqw1);
     }
+
+    @Override
+    public void updateWithFlavor(SetmealDto setmealDto) {
+        //更新dish表的信息
+        this.updateById(setmealDto);
+        //清理当前菜品对应口味数据---dish_flavor表的delete操作
+        LambdaQueryWrapper<SetmealDish> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(SetmealDish::getDishId, setmealDto.getId());
+        setmealDishService.remove(queryWrapper);
+//       添加提交过来的口味数据
+//        List<DishFlavor> flavors = setmealDto.getFlavors();
+//        flavors = flavors.stream().map(M -> {
+//            M.setDishId(setmealDto.getId());
+//            return M;
+//        }).collect(Collectors.toList());
+        List<SetmealDish> setmealDishes = setmealDto.getSetmealDishes();
+        setmealDishes = setmealDishes.stream().map(M -> {
+            M.setSetmealId(setmealDto.getId());
+            return M;
+        }).collect(Collectors.toList());
+
+        setmealDishService.saveBatch(setmealDishes);
+    }
+
+    @Override
+    public SetmealDto getByIdWithSetmealDish(Long id) {
+        //        据id,查询菜品信息
+        Setmeal setmeal = this.getById(id);
+//        创建一个返回对象
+        SetmealDto setmealDto = new SetmealDto();
+//        拷贝
+        BeanUtils.copyProperties(setmeal, setmealDto);
+
+        //据id查找菜品分类
+        LambdaQueryWrapper<SetmealDish> lqw = new LambdaQueryWrapper<>();
+        lqw.eq(SetmealDish::getDishId, setmeal.getId());
+        List<SetmealDish> list = setmealDishService.list(lqw);
+        setmealDto.setSetmealDishes(list);
+        return setmealDto;
+    }
 }
+
+
 
 
 

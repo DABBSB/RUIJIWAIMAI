@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.DABB.commons.R;
+import org.DABB.dto.DishDto;
 import org.DABB.dto.SetmealDto;
 import org.DABB.entity.Category;
 import org.DABB.entity.Setmeal;
@@ -85,5 +86,10 @@ public class SetmealController {
         log.info(ids.toString());
         setmealService.removeWithDish(ids);
         return R.success("删除成功");
+    }
+
+    @GetMapping("/{id}")
+    public R<SetmealDto> get(@PathVariable Long id) {
+        return R.success(setmealService.getByIdWithSetmealDish(id));
     }
 }

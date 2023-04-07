@@ -5,9 +5,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.DABB.commons.R;
 import org.DABB.entity.Employee;
-import org.DABB.service.ServiceEmployee;
+import org.DABB.service.EmployeeService;
 import org.apache.logging.log4j.util.Strings;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,10 +17,10 @@ import java.time.LocalDateTime;
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
-    private final ServiceEmployee serviceEmployee;
+    private final EmployeeService employeeService;
 
-    public EmployeeController(ServiceEmployee serviceEmployee) {
-        this.serviceEmployee = serviceEmployee;
+    public EmployeeController(EmployeeService employeeService) {
+        this.employeeService = employeeService;
     }
 
     /**
@@ -40,7 +39,7 @@ public class EmployeeController {
 //        根据网页输入的用户名来查询数据库
         LambdaQueryWrapper<Employee> lqw = new LambdaQueryWrapper<>();
         lqw.eq(Employee::getUsername, employee.getUsername());
-        Employee emp = serviceEmployee.getOne(lqw);
+        Employee emp = employeeService.getOne(lqw);
 //        如果没有查询到用户名，返回失败结果
         if (emp == null) {
             return R.error("登录失败");
@@ -84,7 +83,7 @@ public class EmployeeController {
         employee.setCreate_user(UserId);
         employee.setUpdate_user(UserId);
         //添加数据
-        serviceEmployee.save(employee);
+        employeeService.save(employee);
 //        log.info(String.valueOf(request),employee);
         return R.success("添加成功");
     }
@@ -105,7 +104,7 @@ public class EmployeeController {
 //        添加排序条件
         lqw.orderByDesc(Employee::getUpdate_time);
 //        执行查询
-        serviceEmployee.page(page1, lqw);
+        employeeService.page(page1, lqw);
 
         return R.success(page1);
     }
@@ -126,7 +125,7 @@ public class EmployeeController {
 //        更改更新用户
         employee.setUpdate_user((Long) employee1);
 //        修改数据
-        serviceEmployee.updateById(employee);
+        employeeService.updateById(employee);
 
         return R.success("员工信息修改成功");
 //        复用
@@ -135,7 +134,7 @@ public class EmployeeController {
     //    回显
     @GetMapping("/{id}")
     public R<Employee> getById(@PathVariable Long id) {
-        Employee byId = serviceEmployee.getById(id);
+        Employee byId = employeeService.getById(id);
         if (byId != null) {
             return R.success(byId);
         }

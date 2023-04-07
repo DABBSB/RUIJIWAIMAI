@@ -11,5 +11,9 @@ import org.DABB.entity.Dish;
  * @createDate 2023-03-29 10:40:19
  */
 public interface DishService extends IService<Dish> {
-     void saveWithFlavor(DishDto dishDto);
+    void saveWithFlavor(DishDto dishDto);
+
+    DishDto getByIdWithFlavor(Long id);
+
+    void updateWithFlavor(DishDto dishDto);
 }

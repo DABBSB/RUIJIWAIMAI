@@ -5,7 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.DABB.commons.R;
 import org.DABB.entity.Category;
-import org.DABB.service.ServiceCategory;
+import org.DABB.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,8 +16,7 @@ import java.util.List;
 @RequestMapping("/category")
 public class CategoryController {
     @Autowired
-    ServiceCategory serviceCategory;
-
+    CategoryService categoryService;
 
 
     /**
@@ -30,7 +29,7 @@ public class CategoryController {
     public R<String> save(@RequestBody Category category) {
         log.info("Category:{}", category);
 
-        serviceCategory.save(category);
+        categoryService.save(category);
 
         return R.success("添加成功");
     }
@@ -42,14 +41,14 @@ public class CategoryController {
         LambdaQueryWrapper<Category> lqw = new LambdaQueryWrapper<>();
         lqw.orderByAsc(Category::getSort);
 
-        serviceCategory.page(page1, lqw);
+        categoryService.page(page1, lqw);
 
         return R.success(page1);
     }
 
     @DeleteMapping
     public R<String> delete(Long ids) {
-        serviceCategory.remove(ids);
+        categoryService.remove(ids);
         return R.success("删除成功");
     }
 
@@ -61,15 +60,15 @@ public class CategoryController {
      */
     @GetMapping("/list")
     public R<List<Category>> listR(Category category) {
-//    添加排序
+//        添加构造器
         LambdaQueryWrapper<Category> lqw = new LambdaQueryWrapper<>();
-//        条件
+//         过滤条件
         lqw.eq(category.getType() != null, Category::getType, category.getType());
-//        条件排序
+//         排序条件
         lqw.orderByAsc(Category::getSort).orderByDesc(Category::getUpdateTime);
 
-        List<Category> list = serviceCategory.list(lqw);
-        return R.success(list);
+        return R.success(categoryService.list(lqw));
     }
+
 
 }

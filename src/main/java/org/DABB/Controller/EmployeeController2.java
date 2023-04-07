@@ -2,27 +2,22 @@ package org.DABB.Controller;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import lombok.extern.slf4j.Slf4j;
-import net.sf.jsqlparser.statement.select.KSQLWindow;
 import org.DABB.commons.R;
 import org.DABB.entity.Employee;
-import org.DABB.service.ServiceEmployee;
+import org.DABB.service.EmployeeService;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.DigestUtils;
 import org.springframework.web.bind.annotation.*;
 
-import javax.print.attribute.standard.DateTimeAtCreation;
 import javax.servlet.http.HttpServletRequest;
-import java.sql.Time;
-import java.time.LocalDateTime;
 
 //@Slf4j
 //@RestController
 //@RequestMapping("/employee")
 public class EmployeeController2 {
     @Autowired
-    ServiceEmployee serviceEmployee;
+    EmployeeService employeeService;
 
     /**
      * 登录
@@ -40,7 +35,7 @@ public class EmployeeController2 {
         LambdaQueryWrapper<Employee> lqw = new LambdaQueryWrapper<>();
         lqw.eq(Employee::getUsername, employee.getUsername());
 
-        Employee employee1 = serviceEmployee.getOne(lqw);
+        Employee employee1 = employeeService.getOne(lqw);
 //        如果没有查询到用户名返回失败结果
         if (employee1 == null) {
             return R.error("用户不存在,登录失败");
@@ -79,7 +74,7 @@ public class EmployeeController2 {
 //        employee.setCreate_time(LocalDateTime.now());
 //        employee.setUpdate_time(LocalDateTime.now());
 
-        serviceEmployee.save(employee);
+        employeeService.save(employee);
         return R.success("添加完成");
 
     }
@@ -94,7 +89,7 @@ public class EmployeeController2 {
         lpw.like(Strings.isNotEmpty(name), Employee::getName, name);
         lpw.orderByAsc(Employee::getUsername);
 
-        serviceEmployee.page(page1);
+        employeeService.page(page1);
         return R.success(page1);
     }
 
@@ -107,7 +102,7 @@ public class EmployeeController2 {
 //        employee.setUpdate_time(LocalDateTime.now());
 //        employee.setUpdate_user((Long) employee1);
 
-        serviceEmployee.updateById(employee);
+        employeeService.updateById(employee);
 
         return R.success("修改成功");
     }
@@ -115,7 +110,7 @@ public class EmployeeController2 {
     //    回显
     @GetMapping("/{id}")
     public R<Employee> getById(@PathVariable Long id) {
-        Employee byId = serviceEmployee.getById(id);
+        Employee byId = employeeService.getById(id);
         if (byId != null) {
             return R.success(byId);
         }

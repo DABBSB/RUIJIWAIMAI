@@ -2,24 +2,24 @@ package org.DABB.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.DABB.Mapper.MapperCategory;
+import org.DABB.Mapper.CategoryMapper;
 import org.DABB.commons.CustomException;
 import org.DABB.entity.Category;
 import org.DABB.entity.Dish;
 import org.DABB.entity.Setmeal;
 import org.DABB.service.DishService;
-import org.DABB.service.ServiceCategory;
+import org.DABB.service.CategoryService;
 import org.DABB.service.SetmealService;
 import org.springframework.stereotype.Service;
 
 
 
 @Service
-public class ServiceCategoryImpl extends ServiceImpl<MapperCategory, Category> implements ServiceCategory {
+public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> implements CategoryService {
     private final DishService dishService;
     private final SetmealService setmealService;
 
-    public ServiceCategoryImpl(DishService dishService, SetmealService setmealService) {
+    public CategoryServiceImpl(DishService dishService, SetmealService setmealService) {
         this.dishService = dishService;
         this.setmealService = setmealService;
     }

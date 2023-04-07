@@ -5,13 +5,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e8c0009-7735-479b-a051-64d08a0bf3b3" name="变更" comment="Peggie练习1.4.2">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/dto/DishDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/dto/SetmealDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/DishController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/SetmealController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/SetmealDishService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/impl/SetmealDishServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/mybatisx/templates.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/DishflavorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/DishflavorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/PeggieApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/PeggieApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/CategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/CategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/DishflavorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Controller/EmployeeController2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Mapper/DaoEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Mapper/EmployeeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Mapper/MapperCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Mapper/CategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/Mapper/SetmealMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/Mapper/SetmealMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/service/DishService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/DishService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/service/ServiceCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/CategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/service/ServiceEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/service/SetmealService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/SetmealService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/service/impl/DishServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/impl/DishServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/service/impl/ServiceCategoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/service/impl/ServiceEmployeeImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/DABB/service/impl/SetmealServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/DABB/service/impl/SetmealServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +83,7 @@
     "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.15625",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "spring.configuration.checksum": "34ed7d2d9f573aa5691cb08144cc65e5",
     "vue.rearranger.settings.migration": "true"
   }
@@ -158,7 +172,17 @@
       <workItem from="1680321632571" duration="2961000" />
       <workItem from="1680324721374" duration="1739000" />
       <workItem from="1680327647885" duration="4318000" />
-      <workItem from="1680417046061" duration="7087000" />
+      <workItem from="1680417046061" duration="7718000" />
+      <workItem from="1680481705274" duration="6515000" />
+      <workItem from="1680509011019" duration="3156000" />
+      <workItem from="1680518814662" duration="19000" />
+      <workItem from="1680675012219" duration="6000" />
+      <workItem from="1680675365484" duration="420000" />
+      <workItem from="1680675826620" duration="114000" />
+      <workItem from="1680698176348" duration="101000" />
+      <workItem from="1680740664731" duration="14961000" />
+      <workItem from="1680784972894" duration="13000" />
+      <workItem from="1680829440187" duration="5979000" />
     </task>
     <task id="LOCAL-00001" summary="Peggie练习1.0">
       <created>1678848557404</created>
@@ -286,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680420704772</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Peggie练习1.4.2">
+      <created>1680440114054</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1680440114054</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

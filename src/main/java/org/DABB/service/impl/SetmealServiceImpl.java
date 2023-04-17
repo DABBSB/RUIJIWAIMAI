@@ -59,7 +59,7 @@ public class SetmealServiceImpl extends ServiceImpl<SetmealMapper, Setmeal> impl
         this.removeByIds(ids);
 
         LambdaQueryWrapper<SetmealDish> lqw1 = new LambdaQueryWrapper<>();
-        lqw1.in(SetmealDish::getId, ids);
+        lqw1.in(SetmealDish::getSetmealId, ids);
 
         setmealDishService.remove(lqw1);
     }
@@ -70,14 +70,8 @@ public class SetmealServiceImpl extends ServiceImpl<SetmealMapper, Setmeal> impl
         this.updateById(setmealDto);
         //清理当前菜品对应口味数据---dish_flavor表的delete操作
         LambdaQueryWrapper<SetmealDish> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(SetmealDish::getDishId, setmealDto.getId());
+        queryWrapper.eq(SetmealDish::getSetmealId, setmealDto.getId());
         setmealDishService.remove(queryWrapper);
-//       添加提交过来的口味数据
-//        List<DishFlavor> flavors = setmealDto.getFlavors();
-//        flavors = flavors.stream().map(M -> {
-//            M.setDishId(setmealDto.getId());
-//            return M;
-//        }).collect(Collectors.toList());
         List<SetmealDish> setmealDishes = setmealDto.getSetmealDishes();
         setmealDishes = setmealDishes.stream().map(M -> {
             M.setSetmealId(setmealDto.getId());
@@ -89,16 +83,16 @@ public class SetmealServiceImpl extends ServiceImpl<SetmealMapper, Setmeal> impl
 
     @Override
     public SetmealDto getByIdWithSetmealDish(Long id) {
-        //        据id,查询菜品信息
+        //        据id,查询套餐信息
         Setmeal setmeal = this.getById(id);
 //        创建一个返回对象
         SetmealDto setmealDto = new SetmealDto();
 //        拷贝
         BeanUtils.copyProperties(setmeal, setmealDto);
 
-        //据id查找菜品分类
+        //据id查找套餐分类
         LambdaQueryWrapper<SetmealDish> lqw = new LambdaQueryWrapper<>();
-        lqw.eq(SetmealDish::getDishId, setmeal.getId());
+        lqw.eq(SetmealDish::getSetmealId, setmeal.getId());
         List<SetmealDish> list = setmealDishService.list(lqw);
         setmealDto.setSetmealDishes(list);
         return setmealDto;

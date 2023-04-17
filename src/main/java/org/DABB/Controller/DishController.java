@@ -7,6 +7,7 @@ import org.DABB.commons.R;
 import org.DABB.dto.DishDto;
 import org.DABB.entity.Category;
 import org.DABB.entity.Dish;
+import org.DABB.entity.DishFlavor;
 import org.DABB.service.CategoryService;
 import org.DABB.service.DishFlavorService;
 import org.DABB.service.DishService;
@@ -27,6 +28,7 @@ public class DishController {
     DishService dishService;
     final
     CategoryService categoryService;
+
 
     public DishController(DishFlavorService dishFlavorService, DishService dishService, CategoryService categoryService) {
         this.dishFlavorService = dishFlavorService;
@@ -100,8 +102,23 @@ public class DishController {
         return R.success("修改菜品成功");
     }
 
+//    @GetMapping("/list")
+//    public R<List<Dish>> listR(Dish dish) {
+////        添加查询
+//        LambdaQueryWrapper<Dish> lqw = new LambdaQueryWrapper<>();
+//        lqw.eq(Dish::getStatus, 1);
+////        菜品分类
+//        lqw.eq(dish.getCategoryId() != null, Dish::getCategoryId, dish.getCategoryId());
+////        排序
+//        lqw.orderByAsc(Dish::getSort).orderByDesc(Dish::getUpdateTime);
+//
+//        List<Dish> list = dishService.list(lqw);
+//
+//        return R.success(list);
+//    }
+
     @GetMapping("/list")
-    public R<List<Dish>> listR(Dish dish) {
+    public R<List<DishDto>> listR(Dish dish) {
 //        添加查询
         LambdaQueryWrapper<Dish> lqw = new LambdaQueryWrapper<>();
         lqw.eq(Dish::getStatus, 1);
@@ -110,8 +127,26 @@ public class DishController {
 //        排序
         lqw.orderByAsc(Dish::getSort).orderByDesc(Dish::getUpdateTime);
 
-        List<Dish> list = dishService.list(lqw);
+        List<Dish> list1 = dishService.list(lqw);
 
-        return R.success(list);
+        List<DishDto> DishDtolist = list1.stream().map((M) -> {
+            DishDto dishDto = new DishDto();
+            BeanUtils.copyProperties(M, dishDto);
+            //当前菜品的id
+            Long Dishid = M.getId();
+
+            LambdaQueryWrapper<DishFlavor> lqwDish = new LambdaQueryWrapper<>();
+
+            lqwDish.eq(DishFlavor::getDishId, Dishid);
+
+            List<DishFlavor> list = dishFlavorService.list(lqwDish);
+
+            dishDto.setFlavors(list);
+
+            return dishDto;
+        }).collect(Collectors.toList());
+
+        return R.success(DishDtolist);
     }
+
 }

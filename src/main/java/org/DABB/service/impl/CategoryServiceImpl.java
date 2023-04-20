@@ -10,34 +10,32 @@ import org.DABB.entity.Setmeal;
 import org.DABB.service.DishService;
 import org.DABB.service.CategoryService;
 import org.DABB.service.SetmealService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 
 @Service
 public class CategoryServiceImpl extends ServiceImpl<CategoryMapper, Category> implements CategoryService {
-    private final DishService dishService;
-    private final SetmealService setmealService;
+    @Autowired
+    private DishService dishService;
+    @Autowired
+    private SetmealService setmealService;
 
-    public CategoryServiceImpl(DishService dishService, SetmealService setmealService) {
-        this.dishService = dishService;
-        this.setmealService = setmealService;
-    }
 
     @Override
-    public void remove(Long id) {
-        LambdaQueryWrapper<Dish> lqwD = new LambdaQueryWrapper<>();
-        lqwD.eq(Dish::getCategoryId, id);
-        int count = dishService.count(lqwD);
-        if (count > 0) {
-            throw new CustomException("当前分类关联了菜品，不能删除");
+    public void remove(Long ids) {
+        LambdaQueryWrapper<Dish> dishLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        dishLambdaQueryWrapper.eq(Dish::getCategoryId, ids);
+        int count1 = dishService.count(dishLambdaQueryWrapper);
+        if (count1 > 0) {
+            throw new CustomException("当前分类下关联了菜品，不能删除");
         }
-        LambdaQueryWrapper<Setmeal> lqwS = new LambdaQueryWrapper<>();
-        lqwS.eq(Setmeal::getCategoryId, id);
-        int count2 = setmealService.count(lqwS);
+        LambdaQueryWrapper<Setmeal> setmealLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        setmealLambdaQueryWrapper.eq(Setmeal::getCategoryId, ids);
+        int count2 = setmealService.count(setmealLambdaQueryWrapper);
         if (count2 > 0) {
-            throw new CustomException("当前分类关联了套餐，不能删除");
+            throw new CustomException("当前分类下关联了套餐，不能删除");
         }
-        super.removeById(id);
+        super.removeById(ids);
     }
 }

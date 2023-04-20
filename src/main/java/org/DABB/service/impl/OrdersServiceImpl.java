@@ -36,7 +36,6 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> impleme
     @Autowired
     public OrderDetailService orderDetailService;
 
-    @Override
     @Transactional
     public void submit(Orders orders) {
         //查询用户id
@@ -94,7 +93,7 @@ public class OrdersServiceImpl extends ServiceImpl<OrdersMapper, Orders> impleme
         this.save(orders);
         //向订单明细表 插入多个数据
         orderDetailService.saveBatch(orderDetails);
-        //
+        //删除购物车
         shoppingCartService.remove(lqw);
     }
 }

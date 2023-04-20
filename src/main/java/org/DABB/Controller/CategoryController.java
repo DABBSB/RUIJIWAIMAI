@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/category")
 public class CategoryController {
     @Autowired
-    CategoryService categoryService;
+    private CategoryService categoryService;
 
 
     /**
@@ -59,7 +59,7 @@ public class CategoryController {
      * @return
      */
     @GetMapping("/list")
-    public R<List<Category>> listR(Category category) {
+    public R<List<Category>> list(Category category) {
 //        添加构造器
         LambdaQueryWrapper<Category> lqw = new LambdaQueryWrapper<>();
 //         过滤条件
@@ -67,7 +67,8 @@ public class CategoryController {
 //         排序条件
         lqw.orderByAsc(Category::getSort).orderByDesc(Category::getUpdateTime);
 
-        return R.success(categoryService.list(lqw));
+        List<Category> list = categoryService.list(lqw);
+        return R.success(list);
     }
 
 

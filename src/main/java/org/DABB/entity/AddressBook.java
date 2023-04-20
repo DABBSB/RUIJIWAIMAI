@@ -3,7 +3,6 @@ package org.DABB.entity;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import lombok.Data;
-
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
@@ -88,6 +87,6 @@ public class AddressBook implements Serializable {
     private Long updateUser;
 
 
-    //是否删除
-    private Integer isDeleted;
+//    //是否删除
+//    private Integer isDeleted;
 }

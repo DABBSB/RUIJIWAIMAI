@@ -70,9 +70,34 @@ public class ShoppingCartController {
     @DeleteMapping("/clean")
     public R<String> clean() {
         LambdaQueryWrapper<ShoppingCart> lqw = new LambdaQueryWrapper<>();
+
         lqw.eq(ShoppingCart::getUserId, BaseContext.getCurrentId());
 
         shoppingCartService.remove(lqw);
         return R.success("已清空");
+    }
+
+    @PostMapping("/sub")
+    public R<ShoppingCart> sub(@RequestBody ShoppingCart shoppingCart) {
+        Long dishId = shoppingCart.getDishId();
+        LambdaQueryWrapper<ShoppingCart> lqw = new LambdaQueryWrapper<>();
+        if (dishId != null) {
+            lqw.eq(ShoppingCart::getUserId, BaseContext.getCurrentId());
+            lqw.eq(ShoppingCart::getDishId, dishId);
+            ShoppingCart one = shoppingCartService.getOne(lqw);
+            if (one.getNumber() > 1) {
+                Integer number = one.getNumber();
+                one.setNumber(number - 1);
+                shoppingCartService.updateById(one);
+            } else {
+                Integer number = one.getNumber();
+                one.setNumber(number - 1);
+                shoppingCartService.updateById(one);
+                shoppingCartService.remove(lqw);
+            }
+            return R.success(one);
+        } else {
+            return null;
+        }
     }
 }
